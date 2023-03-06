@@ -1,0 +1,38 @@
+# Reading and Writing Files
+
+mydatafile <- read.table(file=file.choose())
+mydatafile
+
+# Logical Operators
+
+# ! (NOT)
+# & and && (AND)
+# | and || (OR)
+
+# Loops
+
+counter <- 0
+for (i in 10:12){
+  counter <- counter+1
+  cat("The item in run", counter, "is", i, "\n")
+}
+
+myval <- 4
+while (myval<12){
+  myval = myval + 1
+  print (myval)
+}
+
+words <- c('Hi', 'Kazi', 'Samia')
+for(i in words){
+  info <- c(i, nchar(i))
+  print (info)
+}
+
+dollar <- 50
+set.seed(2023)
+for(bet in (2:50)){
+  outcome <- sample(c(1,-1), 1, prob = c(18/38, 20/38))
+  dollar[bet]<- dollar[bet-1]+outcome
+}
+dollar
